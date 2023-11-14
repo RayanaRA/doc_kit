@@ -1,55 +1,148 @@
+import 'package:doc_kit/app/components/constatnts/colors.dart';
+import 'package:doc_kit/app/components/constatnts/colors.dart';
+import 'package:doc_kit/app/components/constatnts/colors.dart';
+import 'package:doc_kit/app/components/text_field.dart/text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomePage extends StatelessWidget {
+  List catNames = [
+  'Dental',
+  'Heart',
+  'Eye',
+  'Brain ',
+  'Ear',
 
-  @override
-  _HomePageState createState() => _HomePageState();
-}
+  ];
+  List<Icon> catIcons = [
+    Icon(MdiIcons.toothOutline,color: gColor,size: 30,),
+    Icon(MdiIcons.heartPlus,color: gColor,size: 30,),
+    Icon(MdiIcons.eye,color: gColor,size: 30,),
+    Icon(MdiIcons.brain,color: gColor,size: 30,),
+    Icon(MdiIcons.earHearing,color: gColor,size: 30,),
+  ];
+   HomePage({Key? key}) : super(key: key);
 
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      body: Column(
-        children: [
-          Container(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height,
-              padding: EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [],
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
+      backgroundColor: gwColor,
+      body: SingleChildScrollView(
+        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
+        child: Stack(children: [
+          Column(
+            children: [
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height / 3.9,
+                padding: EdgeInsets.all(0),
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [wColor.withOpacity(0.8), gColor],
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                    ),
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(25),
+                        bottomRight: Radius.circular(25))),
+                child: Padding(
+                  padding: EdgeInsets.only(top: 10),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 0),
+                        child: Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(left: 20, top: 10),
+                                  child: Text(
+                                    'Hi handweaker!',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                Spacer(),
+                                Padding(
+                                  padding: EdgeInsets.only(right: 20, top: 10),
+                                  child: CircleAvatar(
+                                    radius: 30,
+                                    backgroundImage:
+                                        AssetImage("assets/images/user.png"),
+                                  ),
+                                )
+                              ],
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(right: 100),
+                              child: Text(
+                                'Find trusted doctors',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                  borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(20),
-                      bottomRight: Radius.circular(20))),
-              child: Padding(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        CircleAvatar(
-                          radius: 30,
-                          backgroundImage: AssetImage("images/image.png"),
-                        ),
-                        Icon(
-                          Icons.notifications_outlined,
-                          color: Colors.white,
-                          size: 30,
-                        ),
-                      ],
-                    )
-                  ],
                 ),
-                padding: EdgeInsets.only(top: 30),
-              ))
-        ],
+              ),
+              Container(
+                padding: EdgeInsets.only(right: 230, top: 10),
+                child: Text(
+                  'Categories',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Container(
+                height: 100,
+                child: Expanded(
+                    child: ListView.builder(
+                        shrinkWrap: true,
+                        scrollDirection: Axis.horizontal,
+                        itemCount: catNames.length,
+                        itemBuilder: (context, index) {
+                          return Column(children: [
+                            Container(
+                              margin: EdgeInsets.symmetric(
+                                  vertical: 5, horizontal: 15),
+                              height: 60,
+                              width: 60,
+                              decoration: BoxDecoration(
+                                  color: wColor,
+                                  shape: BoxShape.circle,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: wColor,
+                                      spreadRadius: 2,
+                                    )
+                                  ]
+                                  ),
+child: Center(child: catIcons[index]),
+                                  
+                            )
+                          ]);
+                        })),
+              )
+            ],
+          ),
+        ]),
       ),
     ));
   }

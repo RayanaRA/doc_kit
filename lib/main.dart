@@ -12,9 +12,9 @@ const myApp ({ Key? key }) : super(key: key);
   @override
   Widget build(BuildContext context){
     return MaterialApp(
-      initialRoute: '/getScr',
+      initialRoute: '/homePage',
 routes: {
-  '/homePage':(context) => const HomePage(),
+  '/homePage':(context) =>  HomePage(),
   '/list':(context) => const ListCard(),
   '/getScr':(context) => const GetStarted(),
   '/signUp':(context) => const SignUp()
