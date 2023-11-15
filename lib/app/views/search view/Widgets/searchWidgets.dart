@@ -24,7 +24,7 @@ class FindDoctorsWidgets extends StatelessWidget {
                 width: 35,
                 height: 35,
                 decoration: BoxDecoration(
-                  color: Colors.blue,
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: const Icon(

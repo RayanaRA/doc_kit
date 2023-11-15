@@ -52,6 +52,7 @@ class _BiographyContainerWidgetsState extends State<BiographyContainerWidgets> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           widget.title!,
@@ -61,13 +62,9 @@ class _BiographyContainerWidgetsState extends State<BiographyContainerWidgets> {
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Rubik'),
                         ),
-                        const SizedBox(
-                          width: 20,
-                        ),
                         IconButton(
                           onPressed: () {
                             setState(() {
-                              print('asdasd');
                               isRedFavorit = !isRedFavorit;
                             });
                           },
