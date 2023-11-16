@@ -1,5 +1,6 @@
 import 'package:doc_kit/app/components/container/list_card.dart';
 import 'package:doc_kit/app/views/home_page/home_page.dart';
+import 'package:doc_kit/app/views/profile/profile.dart';
 import 'package:doc_kit/app/views/register/get_started.dart';
 import 'package:doc_kit/app/views/register/sign_up.dart';
 import 'package:flutter/material.dart';
@@ -12,8 +13,9 @@ const myApp ({ Key? key }) : super(key: key);
   @override
   Widget build(BuildContext context){
     return MaterialApp(
-      initialRoute: '/homePage',
+      initialRoute: '/profileOfDoctor',
 routes: {
+  '/profileOfDoctor':(context) => Profile(),
   '/homePage':(context) =>  HomePage(),
   '/list':(context) => const ListCard(),
   '/getScr':(context) => const GetStarted(),

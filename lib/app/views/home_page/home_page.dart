@@ -1,27 +1,47 @@
 import 'package:doc_kit/app/components/constatnts/colors.dart';
 import 'package:doc_kit/app/components/constatnts/colors.dart';
 import 'package:doc_kit/app/components/constatnts/colors.dart';
+import 'package:doc_kit/app/components/container/list_card.dart';
 import 'package:doc_kit/app/components/text_field.dart/text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class HomePage extends StatelessWidget {
   List catNames = [
-  'Dental',
-  'Heart',
-  'Eye',
-  'Brain ',
-  'Ear',
-
+    'Dental',
+    'Heart',
+    'Eye',
+    'Brain ',
+    'Ear',
   ];
   List<Icon> catIcons = [
-    Icon(MdiIcons.toothOutline,color: gColor,size: 30,),
-    Icon(MdiIcons.heartPlus,color: gColor,size: 30,),
-    Icon(MdiIcons.eye,color: gColor,size: 30,),
-    Icon(MdiIcons.brain,color: gColor,size: 30,),
-    Icon(MdiIcons.earHearing,color: gColor,size: 30,),
+    Icon(
+      MdiIcons.toothOutline,
+      color: gColor,
+      size: 30,
+    ),
+    Icon(
+      MdiIcons.heartPlus,
+      color: gColor,
+      size: 30,
+    ),
+    Icon(
+      MdiIcons.eye,
+      color: gColor,
+      size: 30,
+    ),
+    Icon(
+      MdiIcons.brain,
+      color: gColor,
+      size: 30,
+    ),
+    Icon(
+      MdiIcons.earHearing,
+      color: gColor,
+      size: 30,
+    ),
   ];
-   HomePage({Key? key}) : super(key: key);
+  HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -93,12 +113,30 @@ class HomePage extends StatelessWidget {
                           ],
                         ),
                       ),
+                      Padding(
+                        padding: EdgeInsets.only(top: 20,right: 10),
+                        child: Container(
+                          width: 335,
+                          height: 50,
+                          child: TextFields(
+                            hintText: 'search..',
+                            hintStyle: TextStyle(
+                              color: dColor
+                            ),
+                            suffixIcon: Icon(Icons.close,color: dColor,),
+                          ),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            color: wColor,
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
               ),
               Container(
-                padding: EdgeInsets.only(right: 230, top: 10),
+                padding: EdgeInsets.only(right: 230, top: 20),
                 child: Text(
                   'Categories',
                   style: TextStyle(
@@ -108,7 +146,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 15,
+                height: 30,
               ),
               Container(
                 height: 100,
@@ -116,12 +154,12 @@ class HomePage extends StatelessWidget {
                     child: ListView.builder(
                         shrinkWrap: true,
                         scrollDirection: Axis.horizontal,
-                        itemCount: catNames.length,
+                        itemCount: catIcons.length,
                         itemBuilder: (context, index) {
                           return Column(children: [
                             Container(
                               margin: EdgeInsets.symmetric(
-                                  vertical: 5, horizontal: 15),
+                                  vertical: 8, horizontal: 15),
                               height: 60,
                               width: 60,
                               decoration: BoxDecoration(
@@ -132,14 +170,34 @@ class HomePage extends StatelessWidget {
                                       color: wColor,
                                       spreadRadius: 2,
                                     )
-                                  ]
-                                  ),
-child: Center(child: catIcons[index]),
-                                  
+                                  ]),
+                              child: Center(child: catIcons[index]),
                             )
                           ]);
                         })),
-              )
+              ),
+              SizedBox(
+                height: 13,
+              ),
+              Container(
+                  child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(right: 180),
+                    child: Text(
+                      'Popular doctors',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  ListCard()
+                ],
+              ))
             ],
           ),
         ]),
