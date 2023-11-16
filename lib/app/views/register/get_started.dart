@@ -1,5 +1,4 @@
 import 'package:doc_kit/app/components/container/container.dart';
-import 'package:doc_kit/app/views/register/sign_up.dart';
 import 'package:flutter/material.dart';
 
 class GetStarted extends StatefulWidget {
@@ -47,7 +46,7 @@ class _GetStartedState extends State<GetStarted> {
           ),
           Container_widget(
             onTap: () {
-              Navigator.pushNamed(context, '/seachView');
+              Navigator.pushNamed(context, '/navbarPage');
             },
             text: 'Get started',
           )
