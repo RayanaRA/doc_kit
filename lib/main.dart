@@ -19,6 +19,7 @@ class myApp extends StatelessWidget {
     return MaterialApp(
 
 
+
       initialRoute: '/profileOfDoctor',
 routes: {
   '/profileOfDoctor':(context) => Profile(),
@@ -29,7 +30,6 @@ routes: {
 },      
   debugShowCheckedModeBanner: false,
 
-      
     );
   }
 }
