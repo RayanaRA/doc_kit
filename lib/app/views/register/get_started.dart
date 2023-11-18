@@ -1,6 +1,8 @@
+import 'package:doc_kit/app/components/constatnts/colors.dart';
+import 'package:doc_kit/app/components/constatnts/colors.dart';
 import 'package:doc_kit/app/components/container/container.dart';
-import 'package:doc_kit/app/views/register/sign_up.dart';
 import 'package:flutter/material.dart';
+
 
 class GetStarted extends StatefulWidget {
   static String route = 'Get Started ';
