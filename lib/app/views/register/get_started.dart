@@ -49,7 +49,7 @@ class _GetStartedState extends State<GetStarted> {
           ),
           Container_widget(
             onTap: () {
-              Navigator.pushNamed(context, '/seachView');
+              Navigator.pushNamed(context, '/navbarPage');
             },
             text: 'Get started',
           )

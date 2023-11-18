@@ -47,6 +47,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
+
       backgroundColor: gwColor,
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
@@ -60,10 +61,12 @@ class HomePage extends StatelessWidget {
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors: [wColor.withOpacity(0.8), gColor],
+
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                     ),
                     borderRadius: BorderRadius.only(
+
                         bottomLeft: Radius.circular(25),
                         bottomRight: Radius.circular(25))),
                 child: Padding(
@@ -201,6 +204,7 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ]),
+
       ),
     ));
   }
