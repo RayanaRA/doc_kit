@@ -39,7 +39,8 @@ class _GetStartedState extends State<GetStarted> {
               Text(
                 'fast and simple',
                 style: TextStyle(
-                    color: Color(0xFF0ebe7f), ),
+                  color: Color(0xFF0ebe7f),
+                ),
               )
             ]),
           )),
@@ -47,10 +48,11 @@ class _GetStartedState extends State<GetStarted> {
             height: 160,
           ),
           Container_widget(
-            onTap: (){
-              Navigator.pushNamed(context, '/signUp');
+            onTap: () {
+              Navigator.pushNamed(context, '/seachView');
             },
-            text: 'Get started',)
+            text: 'Get started',
+          )
         ],
       ),
     ));
