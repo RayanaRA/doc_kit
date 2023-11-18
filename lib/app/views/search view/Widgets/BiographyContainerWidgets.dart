@@ -30,7 +30,8 @@ class _BiographyContainerWidgetsState extends State<BiographyContainerWidgets> {
     return Container(
         width: 380,
         height: 230,
-        color: Colors.white,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10), color: Colors.white),
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(children: [
