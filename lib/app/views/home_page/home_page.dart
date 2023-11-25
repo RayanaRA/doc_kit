@@ -47,7 +47,6 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-
       backgroundColor: gwColor,
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
@@ -61,12 +60,10 @@ class HomePage extends StatelessWidget {
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors: [wColor.withOpacity(0.8), gColor],
-
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                     ),
                     borderRadius: BorderRadius.only(
-
                         bottomLeft: Radius.circular(25),
                         bottomRight: Radius.circular(25))),
                 child: Padding(
@@ -117,20 +114,23 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(top: 20,right: 10),
-                        child: Container(
-                          width: 335,
-                          height: 50,
-                          child: TextFields(
-                            hintText: 'search..',
-                            hintStyle: TextStyle(
-                              color: dColor
+                        padding: EdgeInsets.only(top: 20, right: 10),
+                        child: Center(
+                          child: Container(
+                            width: 335,
+                            height: 50,
+                            child: TextFields(
+                              hintText: 'search..',
+                              hintStyle: TextStyle(color: dColor),
+                              suffixIcon: Icon(
+                                Icons.close,
+                                color: dColor,
+                              ),
                             ),
-                            suffixIcon: Icon(Icons.close,color: dColor,),
-                          ),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            color: wColor,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              color: wColor,
+                            ),
                           ),
                         ),
                       ),
@@ -204,7 +204,6 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ]),
-
       ),
     ));
   }

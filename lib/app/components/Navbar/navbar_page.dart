@@ -1,3 +1,4 @@
+import 'package:doc_kit/app/views/home%20view/homeView.dart';
 import 'package:doc_kit/app/views/home_page/home_page.dart';
 import 'package:doc_kit/app/views/search%20view/FindDoctorsWidgets.dart';
 import 'package:flutter/cupertino.dart';
@@ -15,7 +16,7 @@ class _NavbarPageState extends State<NavbarPage> {
   final _screens = [
     HomePage(),
     FindDoctorsWidgets(),
-    Text('data'),
+    HomeView(),
     Text('data'),
   ];
   @override
@@ -43,7 +44,8 @@ class _NavbarPageState extends State<NavbarPage> {
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home View'),
             BottomNavigationBarItem(
-                icon: Icon(CupertinoIcons.search), label: 'Serch View'),
+                icon: Icon(CupertinoIcons.heart_circle_fill),
+                label: 'Serch View'),
             BottomNavigationBarItem(
                 icon: Icon(CupertinoIcons.book_solid), label: 'Home View'),
             BottomNavigationBarItem(
