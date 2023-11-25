@@ -1,3 +1,4 @@
+import 'package:doc_kit/app/page/favourite/favourites.dart';
 import 'package:doc_kit/app/views/home%20view/homeView.dart';
 import 'package:doc_kit/app/views/home_page/home_page.dart';
 import 'package:doc_kit/app/views/search%20view/FindDoctorsWidgets.dart';
@@ -15,9 +16,9 @@ class _NavbarPageState extends State<NavbarPage> {
   int _selectedInhdex = 0;
   final _screens = [
     HomePage(),
-    FindDoctorsWidgets(),
+    Favourites(),
     HomeView(),
-    Text('data'),
+    FindDoctorsWidgets(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -42,15 +43,30 @@ class _NavbarPageState extends State<NavbarPage> {
             });
           },
           items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home View'),
             BottomNavigationBarItem(
-                icon: Icon(CupertinoIcons.heart_circle_fill),
-                label: 'Serch View'),
+                icon: Icon(
+                  Icons.home,
+                  size: 35,
+                ),
+                label: ''),
             BottomNavigationBarItem(
-                icon: Icon(CupertinoIcons.book_solid), label: 'Home View'),
+                icon: Icon(
+                  CupertinoIcons.heart_circle_fill,
+                  size: 35,
+                ),
+                label: ''),
             BottomNavigationBarItem(
-                icon: Icon(CupertinoIcons.chat_bubble_text_fill),
-                label: 'Home View'),
+                icon: Icon(
+                  CupertinoIcons.book_solid,
+                  size: 35,
+                ),
+                label: ''),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  CupertinoIcons.chat_bubble_text_fill,
+                  size: 35,
+                ),
+                label: ''),
           ],
         ),
       ),
