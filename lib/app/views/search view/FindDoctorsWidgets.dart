@@ -1,3 +1,4 @@
+import 'package:doc_kit/app/views/home%20view/widgets/homeViewBodyWidgets.dart';
 import 'package:doc_kit/app/views/search%20view/Widgets/CatalogsWidgets.dart';
 import 'package:flutter/material.dart';
 
@@ -105,7 +106,7 @@ class _FindDoctorsWidgetsState extends State<FindDoctorsWidgets> {
                     ),
                   ),
                 ),
-                controller.text.isEmpty ? Catalogs() : Text('data')
+                controller.text.isEmpty ? homeViewBodyWidgets() : Catalogs()
               ],
             ),
           ),

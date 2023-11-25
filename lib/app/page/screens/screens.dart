@@ -1,7 +1,7 @@
-import 'package:doc_kit/app/views/favourite/favourites.dart';
+import 'package:doc_kit/app/page/favourite/favourites.dart';
 import 'package:doc_kit/app/views/home_page/home_page.dart';
-import 'package:doc_kit/app/views/profile/profile.dart';
-import 'package:doc_kit/app/views/tests/tests.dart';
+import 'package:doc_kit/app/page/profile/profile.dart';
+import 'package:doc_kit/app/page/tests/tests.dart';
 import 'package:flutter/material.dart';
 
 class Screens extends StatelessWidget {

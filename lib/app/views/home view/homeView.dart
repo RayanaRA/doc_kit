@@ -1,17 +1,17 @@
 import 'package:doc_kit/app/views/home%20view/widgets/homeViewBodyWidgets.dart';
 import 'package:doc_kit/app/views/home%20view/widgets/homeViewProfile.dart';
-import 'package:doc_kit/app/views/search%20view/seachView.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatefulWidget {
-  const HomeView({Key? key}) : super(key: key);
+  HomeView({Key? key}) : super(key: key);
 
   @override
-  _HomeViewState createState() => _HomeViewState();
+  State<HomeView> createState() => _HomeViewState();
 }
 
 class _HomeViewState extends State<HomeView> {
   TextEditingController controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -39,11 +39,13 @@ class _HomeViewState extends State<HomeView> {
                   heightFactor: 0.3,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          TextFormField(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          height: 70,
+                          width: 250,
+                          child: TextFormField(
                             controller: controller,
                             onChanged: (query) {
                               setState(() {});
@@ -81,25 +83,25 @@ class _HomeViewState extends State<HomeView> {
                                   )),
                             ),
                           ),
-                          SizedBox(
-                            height: 20,
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Text(
+                            'Live Doctors',
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'Rubik'),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 10),
-                            child: Text(
-                              'Live Doctors',
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: 'Rubik'),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 35,
-                          ),
-                        ],
-                      ),
+                        ),
+                        SizedBox(
+                          height: 35,
+                        ),
+                      ],
                     ),
                   ),
                 ),
