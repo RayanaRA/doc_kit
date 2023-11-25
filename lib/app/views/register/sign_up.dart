@@ -52,20 +52,21 @@ class _SignUpState extends State<SignUp> {
               padding: const EdgeInsets.only(top: 100, right: 55),
               child: InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context,'/homePage');
+                  Navigator.pushNamed(context, '/navbarPage');
                 },
                 child: Container_widget(
-                  
                   text: 'Sign Up',
                 ),
               ),
             ),
-            TextButton(onPressed: (){}, child: Text('Have an account,Sign in',
-            style: TextStyle(
-              color: Colors.blue,
-              
-            ),
-            ))
+            TextButton(
+                onPressed: () {},
+                child: Text(
+                  'Have an account,Sign in',
+                  style: TextStyle(
+                    color: Colors.blue,
+                  ),
+                ))
           ],
         ),
       ),
