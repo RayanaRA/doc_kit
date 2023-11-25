@@ -1,4 +1,4 @@
-import 'package:doc_kit/app/page/favourite/favourites.dart';
+import 'package:doc_kit/app/views/favourite/favourites.dart';
 import 'package:doc_kit/app/views/home%20view/homeView.dart';
 import 'package:doc_kit/app/views/home_page/home_page.dart';
 import 'package:doc_kit/app/views/search%20view/FindDoctorsWidgets.dart';

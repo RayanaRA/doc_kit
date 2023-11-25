@@ -1,4 +1,4 @@
-import 'package:doc_kit/app/page/favourite/widgets/bodyFavorit.dart';
+import 'package:doc_kit/app/views/favourite/widgets/bodyFavorit.dart';
 import 'package:doc_kit/app/views/home%20view/widgets/featureDoctorWidget.dart';
 import 'package:doc_kit/app/views/search%20view/Widgets/CatalogsWidgets.dart';
 import 'package:flutter/material.dart';
