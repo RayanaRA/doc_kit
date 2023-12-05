@@ -1,7 +1,7 @@
 import 'package:doc_kit/app/components/Navbar/navbar_page.dart';
 import 'package:doc_kit/app/components/container/list_card.dart';
 import 'package:doc_kit/app/views/home_page/home_page.dart';
-import 'package:doc_kit/app/page/profile/profile.dart';
+import 'package:doc_kit/app/views/profile/profile.dart';
 import 'package:doc_kit/app/views/register/get_started.dart';
 import 'package:doc_kit/app/views/register/sign_up.dart';
 import 'package:flutter/material.dart';
@@ -23,6 +23,7 @@ class myApp extends StatelessWidget {
         '/getScr': (context) => const GetStarted(),
         '/signUp': (context) => const SignUp(),
         '/navbarPage': (context) => const NavbarPage(),
+        '/profileView': (context) => const Profile(),
       },
       debugShowCheckedModeBanner: false,
     );
